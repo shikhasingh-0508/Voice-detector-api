@@ -6,7 +6,7 @@ from fastapi.responses import HTMLResponse
 app = FastAPI(title="AI Guard: Secure Voice Detection")
 
 # --- UPDATED API KEY ---
-VALID_API_KEY = "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"
+VALID_API_KEY = "SECRET_KEY"
 
 @app.post("/api/voice-detection")
 async def detect_voice(x_api_key: str = Header(None), payload: dict = Body(...)):
