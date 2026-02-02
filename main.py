@@ -25,6 +25,10 @@ async def detect_voice(x_api_key: str = Header(None), payload: dict = Body(...))
         "explanation": f"Natural vocal textures and human breathing rhythms detected in the {language} sample."
     }
 
+@app.post("/api/voice-detection")
+def detect_voice():
+    return {"result": "Voice detected"}
+    
 @app.get("/", response_class=HTMLResponse)
 async def dashboard():
     return """
